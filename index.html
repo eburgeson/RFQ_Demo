@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vendor RFQ Submission Portal</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* BRAND COLORS */
+    :root {
+        --chiyoda-orange: #F26A24;
+        --dark-text: #333333;
+    }
+
+  .header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background-color: rgb(255, 103, 2);
+    border-bottom: 1px solid #ddd;
+}
+
+.logo-left, .logo-right {
+    height: 55px;
+    width: auto;
+}
+
+.portal-title {
+    flex: 1;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+    /* MAIN CONTAINER */
+    .container {
+        max-width: 900px;
+        margin: 40px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        margin-top: 0;
+        color: var(--dark-text);
+    }
+
+    label {
+        font-weight: bold;
+        margin-top: 15px;
+        display: block;
+        color: var(--dark-text);
+    }
+
+    input, textarea, select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 15px;
+        background-color: #fafafa;
+    }
+
+    textarea {
+        height: 140px;
+        resize: vertical;
+    }
+
+    /* BUTTON */
+    .submit-btn {
+        width: 100%;
+        padding: 14px;
+        margin-top: 25px;
+        background-color: var(--chiyoda-orange);
+        color: white;
+        border: none;
+        font-size: 18px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.2s;
+    }
+
+    .submit-btn:hover {
+        background-color: #d65a1f;
+    }
+</style>
+</head>
+<body>
+
+<!-- HEADER (Centered Title, Left + Right Logos) -->
+<div class="header-bar">
+
+    <!-- LEFT LOGO -->
+    <img src="chiyoda logo.jfif" alt="Chiyoda Logo Left" class="logo-left">
+
+    <!-- CENTERED TITLE -->
+    <h1 class="portal-title">Vendor RFQ Submission Portal</h1>
+
+    <!-- RIGHT LOGO -->
+    <img src="Picture1.jpg" alt="Chiyoda Logo Right" class="logo-right">
+
+</div>
+
+
+<!-- MAIN FORM -->
+<div class="container">
+
+    <h2>Submit a New RFQ</h2>
+    <p>Please complete the form below. All fields are required unless marked optional.</p>
+
+    <form>
+
+        <label>Quote Number</label>
+        <input type="text" required>
+
+        <label>Tooling Cost</label>
+        <input type="number" step="0.01" required>
+
+        <label>Vendor Name</label>
+        <input type="text" required>
+
+        <label>Part Number</label>
+        <input type="text" required>
+
+        <label>Quote Price ($)</label>
+        <input type="number" step="0.01" required>
+
+        <label>Lead Time (Days)</label>
+        <input type="number" step="1" required>
+
+        <label>Notes (Optional)</label>
+        <textarea placeholder="Additional details, terms, or comments..."></textarea>
+
+        <label>Upload Quote File (Optional)</label>
+        <input type="file">
+
+        <button class="submit-btn" type="submit">Submit RFQ</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
