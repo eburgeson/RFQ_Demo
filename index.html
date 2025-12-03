@@ -19,47 +19,53 @@
         --dark-text: #333333;
     }
 
- /* HEADER BAR FIXED + COLOR MATCHED */
+/* WHITE HEADER BAR WITH ORANGE TEXT */
 .header-bar {
+    background-color: white; 
+    padding: 15px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #FF6702; /* Corporate Orange */
-    padding: 12px 25px;
+    border-bottom: 2px solid #eee;
 }
 
-/* Reserve equal space left + right so title is mathematically centered */
-.logo-box {
-    width: 200px;           /* ← Adjust if needed */
+/* KEEP LEFT + RIGHT SAME WIDTH TO CENTER TITLE */
+.header-side {
+    width: 200px;        /* Ensures the title stays perfectly centered */
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
-/* Logo sizes */
-.logo-left {
-    height: 55px;
-    width: auto;
+.left-side {
+    justify-content: flex-start;
 }
 
-.logo-right {
-    height: 55px;
-    width: auto;
+.right-side {
+    justify-content: flex-end;
 }
 
-/* Perfectly centered title */
-.title-box {
+/* TITLE CENTERED */
+.header-center {
     flex-grow: 1;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
 }
 
 .portal-title {
-    color: white;
+    margin: 0;
     font-size: 28px;
     font-weight: bold;
-    margin: 0;
+    color: #FF6702; /* Official Chiyoda Orange */
     text-align: center;
 }
+
+/* LOGO SIZES */
+.logo-left,
+.logo-right {
+    height: 50px;
+    width: auto;
+}
+
 
 /* MAIN CONTAINER */
     .container {
@@ -123,19 +129,20 @@
 <!-- HEADER -->
 <div class="header-bar">
 
-    <div class="logo-box">
+    <div class="header-side left-side">
         <img src="Chiyoda_Logo.jpg" class="logo-left" alt="Chiyoda Logo Left">
     </div>
 
-    <div class="title-box">
+    <div class="header-center">
         <h1 class="portal-title">Vendor RFQ Submission Portal</h1>
     </div>
 
-    <div class="logo-box">
-        <img src="Picture1.jpg" class="logo-right" alt="Chiyoda Icon Right">
+    <div class="header-side right-side">
+        <img src="Picture1.jpg" class="logo-right" alt="Chiyoda Logo Right">
     </div>
 
 </div>
+
 
 
 
@@ -180,3 +187,4 @@
 
 </body>
 </html>
+
