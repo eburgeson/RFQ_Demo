@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit RFQ</title>
+</head>
+<body>
+
+    <h1>Submit RFQ</h1>
+    <p>Please complete this form to submit your quotation.</p>
+
+    <form action="https://httpbin.org/post" method="POST">
+
+        <label>Vendor Name:</label><br>
+        <input type="text" name="vendor" required><br><br>
+
+        <label>Vendor Email:</label><br>
+        <input type="email" name="vendor_email" required><br><br>
+
+        <label>Part Number:</label><br>
+        <input type="text" name="part_number" required><br><br>
+
+        <label>Quote Price ($):</label><br>
+        <input type="number" name="price" step="0.01" required><br><br>
+
+        <label>Lead Time (days):</label><br>
+        <input type="number" name="lead_time" required><br><br>
+
+        <label>Notes:</label><br>
+        <textarea name="notes" rows="4" cols="40"></textarea><br><br>
+
+        <button type="submit">Submit RFQ</button>
+
+    </form>
+
+</body>
+</html>
