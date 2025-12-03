@@ -1,17 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Vendor RFQ Portal</title>
+    <title>My First Webpage</title>
 </head>
 <body>
 
-    <h1>Vendor RFQ Submission Portal</h1>
-    <p>Welcome to the Chiyoda USA Corporation vendor quotation portal.</p>
-
-    <h2>RFQ Actions</h2>
-    <ul>
-        <li><a href="rfq.html">Submit a New RFQ</a></li>
-    </ul>
+<h1>Hello, World!</h1>
+<p>This is my very first webpage.</p>
 
 </body>
 </html>
+<h2> This is a second-level heading </h2>
+<p> It is slightly smaller than H1 and usually used for sections. </p>
+<h3>This is a third-level heading</h3>
+<p>Used for subsections.</p>
+
+<h4>This is a fourth-level heading</h4>
+<p>Even smaller.</p>
+<p>This is a <strong>bold</strong> word.</p>
+<p>This is an <em>italic</em> word.</p>
+<p>Line one<br>Line two<br>Line three</p>
+
+<hr>
+<p>This text is below a horizontal rule (a line dividing sections).</p>
+<h2>Links</h2>
+<p>Click below to go to Google:</p>
+
+<a href="https://www.google.com" target="_blank">
+    Visit Google
+</a>
+<h2>Buttons</h2>
+<button>Click Me</button>
+<button onclick="window.location.href='https://www.microsoft.com';">
+    Go to Microsoft
+</button>
+<h2>Images</h2>
+<img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" width="150">
+>
+<h2>Unordered List (Bullets)</h2>
+<ul>
+    <li>Item One</li>
+    <li>Item Two</li>
+    <li>Item Three</li>
+</ul>
+<h2>Ordered List (Numbers)</h2>
+<ol>
+    <li>First Step</li>
+    <li>Second Step</li>
+    <li>Third Step</li>
+</ol>
+<h2>Basic Table</h2>
+
+<table border="1">
+    <tr>
+        <th>Vendor</th>
+        <th>Part</th>
+        <th>Quote ($)</th>
+    </tr>
+    <tr>
+        <td>Nitto</td>
+        <td>30-1025B</td>
+        <td>1.25</td>
+    </tr>
+    <tr>
+        <td>Amco</td>
+        <td>92143AN00A</td>
+        <td>2.10</td>
+    </tr>
+</table>
+<h2>Sample Form</h2>
+
+<form action="https://httpbin.org/post" method="POST">
+
+
+    <label>Vendor Name:</label><br>
+    <input type="text" name="vendor"><br><br>
+
+    <label>Part Number:</label><br>
+    <input type="text" name="part"><br><br>
+
+    <label>Quote Price ($):</label><br>
+    <input type="number" name="price" step="0.01"><br><br>
+
+    <label>Lead Time:</label><br>
+    <select name="leadtime">
+        <option value="7">7 days</option>
+        <option value="14">14 days</option>
+        <option value="30">30 days</option>
+    </select>
+    <br><br>
+
+    <label>Notes:</label><br>
+    <textarea name="notes" rows="4" cols="40"></textarea>
+    <br><br>
+
+    <button type="submit">Submit RFQ</button>
+
+</form>
